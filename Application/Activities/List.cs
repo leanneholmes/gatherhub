@@ -2,6 +2,7 @@ using Domain;
 using MediatR;
 using Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Application.Activities
 {
@@ -16,7 +17,7 @@ namespace Application.Activities
             {
                 _context = context;
             }
-            public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
+            public async Task<List<Activity>> Handle(Query request, CancellationToken token)
             {
                 return await _context.Activities.ToListAsync();
             }
