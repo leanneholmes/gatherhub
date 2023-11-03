@@ -1,7 +1,7 @@
 import { Button, Icon, Item, Segment } from "semantic-ui-react";
 import { Activity } from "../../../app/models/activty";
 import { Link } from "react-router-dom";
-import { useState, SyntheticEvent } from "react";
+import { useState } from "react";
 import { format } from "date-fns";
 
 interface Props {
